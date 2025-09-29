@@ -8,3 +8,28 @@
   #footer .links{gap:10px}
 }
 
+/* Slightly reduce hero height so content sits lower than the fold */
+#banner.major .inner{padding-top:4rem;padding-bottom:2.5rem}
+
+/* Hero headline: make smaller to fit comfortably */
+#banner .inner header.major h1{font-size:1.75em !important;line-height:1.15 !important;letter-spacing:0 !important;margin-bottom:.6rem;font-family:"Source Sans Pro",Helvetica,sans-serif !important;font-weight:600 !important}
+#banner h1{font-size:1.6em !important;line-height:1.12 !important;font-family:"Source Sans Pro",Helvetica,sans-serif !important;font-weight:600 !important}
+
+/* Stack hero buttons vertically */
+#banner .actions{display:grid;gap:12px;justify-content:start}
+#banner .actions li{margin:0}
+
+/* Two-column layout for headline body matching screenshot */
+.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+.hero-grid .cell h3{margin-top:0}
+.hero-grid .cell{display:flex;flex-direction:column}
+.hero-grid .cell .actions{margin-top:auto}
+@media (max-width: 980px){
+  .hero-grid{grid-template-columns:1fr;gap:20px}
+}
+
+/* Pull banner up and remove negative overlap so buttons remain above tiles */
+#banner{margin-bottom:0 !important;top:0 !important}
+#banner.major{height:auto !important;min-height:0 !important;max-height:none !important}
+#banner.major .inner{padding-bottom:4rem}
+
